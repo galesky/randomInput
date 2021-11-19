@@ -1,29 +1,32 @@
 # randomInput
 
-Create a file with random Numbers
+Use to Create a file with random Integer Numbers
 
-#Compile
-===============================
-make all
+## Compile
+
+`make all`
 
 OR
 
-g++ -o randomInput.out randomInput.cpp
+`g++ -o randomInput.out randomInput.cpp`
 
 
-#Run
-===============================
+## Run
 
-make run args="<number_of_elements> <file_type>"
+After Build, execute:
+
+`make run args="<number_of_elements> <file_type>"`
+
+OR
+
+`./randomInput.out <number_of_elements> <file_type>`
 
 **OBS: file_type (0 - TXT and 1 - DAT)
 
 
-#DAT file
-===============================
-make dat size=<number_of_elements>
+## Create a .DAT file
+`make dat size=<number_of_elements>`
 
-#TXT file
-===============================
-make txt size=<number_of_elements>
+## Create a .TXT file
+`make txt size=<number_of_elements>`
 
