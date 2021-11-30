@@ -27,14 +27,18 @@ vector<int> geraVetorShuffle(int size){
 void createDatFile(int size)
 {
     //Define the file name of tipe DATE
-	char fileName[21];
+	char fileName[30];
 	sprintf(fileName, "Entrada_%d.dat", size);
+
+    printf("Creating %s !!\n", fileName);
 
     //Call the generation of elements
     vector<int> vetor = geraVetorShuffle(size);
+    printf("Shuffle Vector Created!!\n");
 
     //Open File
 	FILE *saveFile = fopen(fileName, "wb");
+    printf("File Created!!\nSaving file ....\n");
 
     //Write to file in Binary
     for (int i = 0; i < size; i++){
@@ -43,19 +47,26 @@ void createDatFile(int size)
 
     //Close File
 	fclose(saveFile);
+    
+    printf("File Saved!!\n");
 }
 
 void createTxtFile(int size)
 {
     //Define the file name of tipe TXT
-	char fileName[21];
+	//Define the file name of tipe DATE
+	char fileName[30];
 	sprintf(fileName, "Entrada_%d.txt", size);
+
+    printf("Creating %s !!\n", fileName);
 
     //Call the generation of elements
     vector<int> vetor = geraVetorShuffle(size);
+    printf("Shuffle Vector Created!!\n");
 
     //Open File
 	FILE *saveFile = fopen(fileName, "wb");
+    printf("File Created!!\nSaving file ....\n");
 
     //Write to file
     for (int i = 0; i < size; i++){
@@ -64,6 +75,8 @@ void createTxtFile(int size)
 
     //Close File
 	fclose(saveFile);
+
+    printf("File Saved!!\n");
 }
 
 
